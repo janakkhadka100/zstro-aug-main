@@ -1,0 +1,25 @@
+pluginManagement {
+  repositories {
+    google()
+    mavenCentral()
+    gradlePluginPortal()
+  }
+}
+
+dependencyResolutionManagement {
+  // यो लाइन change गर्नुहोस् (वा हटाउनुहोस्):
+  // repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+  // वा PREFER_SETTINGS भए पनि केही सेटअपमा fail दिन सक्छ।
+
+  repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)  // ✅ project repos allowed
+
+  repositories {
+    google()
+    mavenCentral()
+  }
+}
+
+rootProject.name = 'android'
+include ':app'
+apply from: './capacitor.settings.gradle'
+include ':capacitor-android'
